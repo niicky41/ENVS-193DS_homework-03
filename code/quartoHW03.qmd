@@ -24,7 +24,7 @@ library(readxl)
 
 Github Repository link: https://github.com/niicky41/ENVS-193DS_homework-03.git
 
-# Problem 1. 
+# Problem 1.  
 
 ## a. 
 This data could be summarized by comparing counts between certain groups - the counts of miles in a day versus the group of either ROTC or school classes that day, for example, or the amount of minutes driven that day with those same categories. This is taking the mean and comparing it between the groups, and is informative because it will tell us if either of those factors directly influence why that day has more miles or minutes in the car.
