@@ -97,4 +97,7 @@ The authors uses a t-test and f-tests. The response variable is the radioactivit
 ![Table 9]https://1drv.ms/i/c/5b79571f20ae30c1/EaAYdiS7vV5LoekqvyNqS8wBfevvAakDbwpA8tAXrd1h0g?e=uIjnZv
 
 ## b.
+The table is very clear at representing the data underlying tests assuming you've read the subsection before and the whole article for that matter. It clearly includes the average, low p-values, and variance, giving a knowledgeable reader an easy interpretation of the results. But, it could indicate how the low p-value here doesn't exactly mean that these particular results are important, as it later goes on to say they're not - which could be misleading.
+
+## c.
 
