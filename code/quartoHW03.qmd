@@ -22,7 +22,8 @@ Github Repository link: https://github.com/niicky41/ENVS-193DS_homework-03.git
 
 # Problem 1. 
 
-## a. This data could be summarized by comparing counts between certain groups - the counts of miles in a day versus the group of either ROTC or school classes that day, for example, or the amount of minutes driven that day with those same categories. This is taking the mean and comparing it between the groups, and is informative because it will tell us if either of those factors directly influence why that day has more miles or minutes in the car.
+## a. 
+This data could be summarized by comparing counts between certain groups - the counts of miles in a day versus the group of either ROTC or school classes that day, for example, or the amount of minutes driven that day with those same categories. This is taking the mean and comparing it between the groups, and is informative because it will tell us if either of those factors directly influence why that day has more miles or minutes in the car.
 
 ## b. 
 ```{r}
@@ -53,7 +54,8 @@ ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #creating my box plot
 
 ```
 
-## c. This boxplot shows the comparison of miles driven and minutes spent driving between days with and ROTC event and days without an ROTC event.
+## c. 
+This boxplot shows the comparison of miles driven and minutes spent driving between days with and ROTC event and days without an ROTC event.
 
 ## d.
 ```{r}
@@ -73,7 +75,8 @@ flextable(summary_table)
 
 # Problem 2.
 
-## a. For this data in particular, I might want to convey the feeling of a long commute or time spent on the road through my visualization. I could achieve that through possibly taking the averages of both the miles driven on a day with ROTC and the miles of a day without ROTC and overlaying those two lines on some kind of road map. Using a road map would convey the feeling of driving, and I could color code, highlight, and thicken the exact routes I take on ROTC days vs not ROTC days to represent time (a thicker road) or the distance (the route, obviously). This might get confusing if i'm trying to overlay time and how often a route is used through thickness. 
+## a. 
+For this data in particular, I might want to convey the feeling of a long commute or time spent on the road through my visualization. I could achieve that through possibly taking the averages of both the miles driven on a day with ROTC and the miles of a day without ROTC and overlaying those two lines on some kind of road map. Using a road map would convey the feeling of driving, and I could color code, highlight, and thicken the exact routes I take on ROTC days vs not ROTC days to represent time (a thicker road) or the distance (the route, obviously). This might get confusing if i'm trying to overlay time and how often a route is used through thickness. 
 
 ## b.
 
@@ -100,4 +103,7 @@ The authors uses a t-test and f-tests. The response variable is the radioactivit
 The table is very clear at representing the data underlying tests assuming you've read the subsection before and the whole article for that matter. It clearly includes the average, low p-values, and variance, giving a knowledgeable reader an easy interpretation of the results. But, it could indicate how the low p-value here doesn't exactly mean that these particular results are important, as it later goes on to say they're not - which could be misleading.
 
 ## c.
+The table is formatted just like a flextable in R. It handles visual clutter alright, but it definitely could be clearer. It lacks dividing lines, and all the reported values are the same text - not bolded, italicized, divided. It can be kind of confusing to determine which is important or meaningful, as they've added a lot of different data with the same visuals into one table.
+
+## d. 
 
