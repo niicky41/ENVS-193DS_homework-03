@@ -113,4 +113,3 @@ The table is formatted just like a flextable in R. It handles visual clutter alr
 
 ## d. 
 One recommendation I would make is to somehow divide the p values from the other data points on the table, be it with a line or font or something else, just to make it more easily readable and draw the reader's eye to the important statistics. Another thing that could be added is some kind of visual along with all the tables, as there are lots of tables in the article but few graphs and no boxplots or other similar graphic. One aesthetic thing I would change is also the way the numbers are formatted. While they make sense, they'd be a lot easier to read if the exponents were actually raised, or perhaps even in a smaller font. 
-
