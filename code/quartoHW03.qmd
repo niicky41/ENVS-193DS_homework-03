@@ -33,11 +33,11 @@ View(df)
 
 colnames(df) <- c("Date", "Miles", "ROTC", "Minutes", "Road_Type", "Destination", "Speed", "Classes") #changing the columns to simpler names
 
-df_long <- df %>%
+df_long <- df |>
   pivot_longer(cols = c(Miles, Minutes), names_to = "Metric", values_to = "Value") #Converting to this kind of table lets me put minutes and miles side by side to compare both in a single box plot
 view(df_long)
 
-ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #creating my boxplot with time and distance categories on the x, and the value of those two on the left (in minutes and miles)
+ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #creating my box plot with time and distance categories on the x, and the value of those two on the left (in minutes and miles)
   geom_boxplot(alpha = 0.6, outlier.shape = NA) +
   geom_jitter(aes(color = ROTC), width = 0.2, alpha = 0.7) +
   scale_fill_manual(values = c("Yes" = "#FF6F61", "No" = "#6B5B95")) +
@@ -57,8 +57,8 @@ ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #creating my boxplot 
 
 ## d.
 ```{r}
-summary_table <- df %>%
-  group_by(ROTC) %>%
+summary_table <- df |>
+  group_by(ROTC) |>
   summarize(
     `N` = n(),
     `Miles (Q1)` = round(quantile(Miles, 0.25, na.rm = TRUE), 1),
@@ -89,6 +89,12 @@ flextable(summary_table)
 - The work is a sketch on a piece of paper, it could definitely be more detailed once I acquire more colors. Could also even use a real map as an underlay, but that would take the artistic part out of it.
 - I created it by simply copying down the Google map and then retracing my common routes and destinations. I cross referenced with the most common destinations - and while I didn't use an exact formula for how thick each line is based on that number, that could definitely be created to increase the accuracy and credibility of the figure.
 
-```{r}
+# Problem 3.
 
-```
+## a.
+The authors uses a t-test and f-tests. The response variable is the radioactivity levels. The predictor variable is the sampling location category (industrial area, populated area, medical facility, or area near an NPP).
+
+![Table 9]https://1drv.ms/i/c/5b79571f20ae30c1/EaAYdiS7vV5LoekqvyNqS8wBfevvAakDbwpA8tAXrd1h0g?e=uIjnZv
+
+## b.
+
