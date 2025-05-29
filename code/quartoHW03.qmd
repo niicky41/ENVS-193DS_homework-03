@@ -9,6 +9,10 @@ format: html
 
 ```{r}
 
+#| warning: false
+#| message: false
+
+
 library(tidyverse)
 library(here)
 library(flextable)
@@ -59,18 +63,20 @@ This boxplot shows the comparison of miles driven and minutes spent driving betw
 
 ## d.
 ```{r}
-summary_table <- df |>
-  group_by(ROTC) |>
+summary_table <- df |> #creating a table from my simplified data
+  group_by(ROTC) |> #grouping the data through ROTC day or not
   summarize(
-    `N` = n(),
-    `Miles (Q1)` = round(quantile(Miles, 0.25, na.rm = TRUE), 1),
+    `N` = n(), #Counting the total number of observations
+    #25th, median, and 75th percentile for miles
+    `Miles (Q1)` = round(quantile(Miles, 0.25, na.rm = TRUE), 1), 
     `Miles (Median)` = round(median(Miles, na.rm = TRUE), 1),
     `Miles (Q3)` = round(quantile(Miles, 0.75, na.rm = TRUE), 1),
+    #25th, median, and 75th percentile for minutes
     `Minutes (Q1)` = round(quantile(Minutes, 0.25, na.rm = TRUE), 1),
     `Minutes (Median)` = round(median(Minutes, na.rm = TRUE), 1),
     `Minutes (Q3)` = round(quantile(Minutes, 0.75, na.rm = TRUE), 1)
   )
-flextable(summary_table)
+flextable(summary_table) #visualizing flex table
 ```
 
 # Problem 2.
@@ -100,10 +106,11 @@ The authors uses a t-test and f-tests. The response variable is the radioactivit
 ![Table 9]https://1drv.ms/i/c/5b79571f20ae30c1/EaAYdiS7vV5LoekqvyNqS8wBfevvAakDbwpA8tAXrd1h0g?e=uIjnZv
 
 ## b.
-The table is very clear at representing the data underlying tests assuming you've read the subsection before and the whole article for that matter. It clearly includes the average, low p-values, and variance, giving a knowledgeable reader an easy interpretation of the results. But, it could indicate how the low p-value here doesn't exactly mean that these particular results are important, as it later goes on to say they're not - which could be misleading.
+The table is pretty clear at representing the data underlying tests assuming you've read the subsection before and the whole article for that matter. It clearly includes the average, low p-values, and variance, giving a knowledgeable reader an easy interpretation of the results. But, it could indicate how the low p-value here doesn't exactly mean that these particular results are important, as it later goes on to say they're not - which could be misleading.
 
 ## c.
 The table is formatted just like a flextable in R. It handles visual clutter alright, but it definitely could be clearer. It lacks dividing lines, and all the reported values are the same text - not bolded, italicized, divided. It can be kind of confusing to determine which is important or meaningful, as they've added a lot of different data with the same visuals into one table.
 
 ## d. 
+One recommendation I would make is to somehow divide the p values from the other data points on the table, be it with a line or font or something else, just to make it more easily readable and draw the reader's eye to the important statistics. Another thing that could be added is some kind of visual along with all the tables, as there are lots of tables in the article but few graphs and no boxplots or other similar graphic. One aesthetic thing I would change is also the way the numbers are formatted. While they make sense, they'd be a lot easier to read if the exponents were actually raised, or perhaps even in a smaller font. 
 
