@@ -32,7 +32,7 @@ This data could be summarized by comparing counts between certain groups - the c
 ## b. 
 ```{r}
 
-my_data <- read_csv("data/My Data - Sheet1.csv") 
+my_data <- read_csv("My Data - Sheet1.csv") 
 df <- na.omit(my_data) #omitting all the N/A lines I have
 View(df)
 
