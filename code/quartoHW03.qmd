@@ -25,7 +25,36 @@ Github Repository link: https://github.com/niicky41/ENVS-193DS_homework-03.git
 ## a. This data could be summarized by comparing counts between certain groups - the counts of miles in a day versus the group of either ROTC or school classes that day, for example, or the amount of minutes driven that day with those same categories. This is taking the mean and comparing it between the groups, and is informative because it will tell us if either of those factors directly influence why that day has more miles or minutes in the car.
 
 ## b. 
+```{r}
+
+my_data <- read_csv("data/My Data - Sheet1.csv") 
+df <- na.omit(my_data) #omitting all the N/A lines I have
+View(df)
+
+colnames(df) <- c("Date", "Miles", "ROTC", "Minutes", "Road_Type", "Destination", "Speed", "Classes") #changing the columns to simpler names
+
+df_long <- df %>%
+  pivot_longer(cols = c(Miles, Minutes), names_to = "Metric", values_to = "Value") #Converting to this kind of table lets me put minutes and miles side by side to compare both
+view(df_long)
+
+ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #
+  geom_boxplot(alpha = 0.6, outlier.shape = NA) +
+  geom_jitter(aes(color = ROTC), width = 0.2, alpha = 0.7) +
+  scale_fill_manual(values = c("Yes" = "#FF6F61", "No" = "#6B5B95")) +
+  scale_color_manual(values = c("Yes" = "#FF6F61", "No" = "#6B5B95")) +
+  labs(
+    title = "Miles and Minutes Driven by ROTC Participation",
+    x = "Metric",
+    y = "Value",
+    fill = "ROTC Day?",
+    color = "ROTC Day?"
+  ) +
+  theme_minimal(base_size = 14)
+
+```
 
 
+```{r}
 
- my_data <- read_csv("My Data - Sheet1.csv") 
+```
+
