@@ -34,10 +34,10 @@ View(df)
 colnames(df) <- c("Date", "Miles", "ROTC", "Minutes", "Road_Type", "Destination", "Speed", "Classes") #changing the columns to simpler names
 
 df_long <- df %>%
-  pivot_longer(cols = c(Miles, Minutes), names_to = "Metric", values_to = "Value") #Converting to this kind of table lets me put minutes and miles side by side to compare both
+  pivot_longer(cols = c(Miles, Minutes), names_to = "Metric", values_to = "Value") #Converting to this kind of table lets me put minutes and miles side by side to compare both in a single box plot
 view(df_long)
 
-ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #
+ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #creating my boxplot with time and distance categories on the x, and the value of those two on the left (in minutes and miles)
   geom_boxplot(alpha = 0.6, outlier.shape = NA) +
   geom_jitter(aes(color = ROTC), width = 0.2, alpha = 0.7) +
   scale_fill_manual(values = c("Yes" = "#FF6F61", "No" = "#6B5B95")) +
@@ -55,7 +55,30 @@ ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #
 
 ## c. This boxplot shows the comparison of miles driven and minutes spent driving between days with and ROTC event and days without an ROTC event.
 
+## d.
 ```{r}
-flextable
+summary_table <- df %>%
+  group_by(ROTC) %>%
+  summarize(
+    `N` = n(),
+    `Miles (Q1)` = round(quantile(Miles, 0.25, na.rm = TRUE), 1),
+    `Miles (Median)` = round(median(Miles, na.rm = TRUE), 1),
+    `Miles (Q3)` = round(quantile(Miles, 0.75, na.rm = TRUE), 1),
+    `Minutes (Q1)` = round(quantile(Minutes, 0.25, na.rm = TRUE), 1),
+    `Minutes (Median)` = round(median(Minutes, na.rm = TRUE), 1),
+    `Minutes (Q3)` = round(quantile(Minutes, 0.75, na.rm = TRUE), 1)
+  )
+flextable(summary_table)
 ```
 
+# Problem 2.
+
+## a. For this data in particular, I might want to convey the feeling of a long commute or time spent on the road through my visualization. I could achieve that through possibly taking the averages of both the miles driven on a day with ROTC and the miles of a day without ROTC and overlaying those two lines on some kind of road map. Using a road map would convey the feeling of driving, and I could color code, highlight, and thicken the exact routes I take on ROTC days vs not ROTC days to represent time (a thicker road) or the distance (the route, obviously). This might get confusing if i'm trying to overlay time and how often a route is used through thickness. 
+
+## b.
+
+![First Image](C:\Users\nicky\OneDrive\Documents\ENVS-193DS\GitGithub\ENVS-193DS_homework-03\data)
+
+```{r}
+
+```
