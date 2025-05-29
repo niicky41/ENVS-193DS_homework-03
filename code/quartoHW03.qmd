@@ -77,7 +77,17 @@ flextable(summary_table)
 
 ## b.
 
-![First Image](C:\Users\nicky\OneDrive\Documents\ENVS-193DS\GitGithub\ENVS-193DS_homework-03\data)
+![Sketch](https://1drv.ms/i/c/5b79571f20ae30c1/EYOV4bspqq5EgCloA7ldIH8BoiCgkhx1UjW7TIyKO7CI_Q?e=ti3Yaw)
+
+## c.
+
+![Draft](https://1drv.ms/i/c/5b79571f20ae30c1/EdapMyE8iQhOrFMxFxCOkCkB7UobRB3h2lE67bDeK8o7ig?e=V3wRK8)
+
+## d.
+- this piece is showing a map of Isla Vista with subsections of the greater Santa Barbara County to illustrate less frequented destinations
+- I like looking at maps and figured this could be a perfect way to implement my data. I've definitely seen similar maps in the past, but not sure what about/where.
+- The work is a sketch on a piece of paper, it could definitely be more detailed once I acquire more colors. Could also even use a real map as an underlay, but that would take the artistic part out of it.
+- I created it by simply copying down the Google map and then retracing my common routes and destinations. I cross referenced with the most common destinations - and while I didn't use an exact formula for how thick each line is based on that number, that could definitely be created to increase the accuracy and credibility of the figure.
 
 ```{r}
 
