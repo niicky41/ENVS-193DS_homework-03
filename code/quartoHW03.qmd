@@ -43,7 +43,7 @@ ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #
   scale_fill_manual(values = c("Yes" = "#FF6F61", "No" = "#6B5B95")) +
   scale_color_manual(values = c("Yes" = "#FF6F61", "No" = "#6B5B95")) +
   labs(
-    title = "Miles and Minutes Driven by ROTC Participation",
+    title = "Miles and Minutes Driven by ROTC Event",
     x = "Metric",
     y = "Value",
     fill = "ROTC Day?",
@@ -53,8 +53,9 @@ ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #
 
 ```
 
+## c. This boxplot shows the comparison of miles driven and minutes spent driving between days with and ROTC event and days without an ROTC event.
 
 ```{r}
-
+flextable
 ```
 
