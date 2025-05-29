@@ -43,12 +43,12 @@ df_long <- df |>
 view(df_long)
 
 ggplot(df_long, aes(x = Metric, y = Value, fill = ROTC)) + #creating my box plot with time and distance categories on the x, and the value of those two on the left (in minutes and miles)
-  geom_boxplot(alpha = 0.6, outlier.shape = NA) +
-  geom_jitter(aes(color = ROTC), width = 0.2, alpha = 0.7) +
-  scale_fill_manual(values = c("Yes" = "#FF6F61", "No" = "#6B5B95")) +
+  geom_boxplot(alpha = 0.6, outlier.shape = NA) +  #creating boxplot, hiding the outliars
+  geom_jitter(aes(color = ROTC), width = 0.2, alpha = 0.7) + #creating jitter with ROTC as the outline group
+  scale_fill_manual(values = c("Yes" = "#FF6F61", "No" = "#6B5B95")) + #filling in colors
   scale_color_manual(values = c("Yes" = "#FF6F61", "No" = "#6B5B95")) +
   labs(
-    title = "Miles and Minutes Driven by ROTC Event",
+    title = "Miles and Minutes Driven by ROTC Event", #Labeling title, x+y axes, legend
     x = "Metric",
     y = "Value",
     fill = "ROTC Day?",
@@ -63,7 +63,7 @@ This boxplot shows the comparison of miles driven and minutes spent driving betw
 
 ## d.
 ```{r}
-summary_table <- df |> #creating a table from my simplified data
+summary_table <- df |> #creating a table from my simplified data. Could do mean based off of the boxplot averages above, but this seems more appropriate
   group_by(ROTC) |> #grouping the data through ROTC day or not
   summarize(
     `N` = n(), #Counting the total number of observations
