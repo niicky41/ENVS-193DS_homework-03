@@ -1,0 +1,38 @@
+Date,Distance driven  (miles),ROTC that day?,Duration of drive (minutes),Types of roads,Destination,Average speed (MPH),Classes that day?
+,,,,,,,
+4/22/2025,9.6,Yes,28,City,"School, ROTC",15,Yes
+4/23/2025,7.3,Yes,25,City,ROTC,14,Yes
+4/24/2025,21.4,Yes,40,City,"ROTC, marketplace, friends",23,Yes
+4/25/2025,10.9,No,32,City,"School, marketplace",17,Yes
+4/26/2025,0,,0,,,,
+4/27/2025,0,,0,,,,
+4/28/2025,0,,0,,,,
+4/29/2025,0,,0,,,,
+4/30/2025,0,,0,,,,
+5/1/2025,0,,0,,,,
+5/2/2025,0,,0,,,,
+5/3/2025,0,,0,,,,
+5/4/2025,0,,0,,,,
+5/5/2025,5.4,Yes,15,City,,15,Yes
+5/6/2025,0,No,0,N/A,N/A,N/A,Yes
+5/7/2025,4.4,Yes,16,City,ROTC,16,Yes
+5/8/2025,8,Yes,33,City,"ROTC, Ellwood (ROTC)",14,Yes
+5/9/2025,13.8,Yes,53,City,"ROTC, Marketplace",14.6,Yes
+5/10/2025,142.6,Yes,188,Highway,"Vandenberg SFB, Santa Maria",47.6,No
+5/11/2025,0,No,0,N/A,N/A,N/A,No
+5/12/2025,6.8,Yes,39,City,"ROTC, school",9.5,Yes
+5/13/2025,7,Yes,35,City,"ROTC, marketplace",19,Yes
+5/14/2025,10.8,Yes,37,City,"ROTC, gym",12.8,Yes
+5/15/2025,8.4,Yes,34,City,"ROTC, Ellwood (ROTC)",13,Yes
+5/16/2025,33,Yes,53,Highway,"ROTC, SB",29.3,Yes
+5/17/2025,4.2,No,15,City,Campus,17,No
+5/18/2025,0,No,0,N/A,N/A,0,No
+5/19/2025,2.2,Yes,14,City,ROTC,14,Yes
+5/20/2025,4.4,No,22,City,Campus,15.6,Yes
+5/21/2025,8.3,Yes,44,City,"ROTC, Campus",13,Yes
+5/22/2025,30.3,Yes,56,Highway,"ROTC, SB",35.6,Yes
+5/23/2025,36.8,Yes,74,Highway,"ROTC, SBCC",28,Yes
+5/24/2025,51,No,68,Highway,Gaviota,49.1,No
+5/25/2025,55.4,No,136,Highway,"Refugio, Marketplace",29.5,No
+5/26/2025,0,No,0,N/A,N/A,N/A,No
+5/27/2025,8.4,Yes,27,City,"ROTC, Campus",12,Yes

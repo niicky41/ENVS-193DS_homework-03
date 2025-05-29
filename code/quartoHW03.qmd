@@ -1,0 +1,25 @@
+---
+title: "quartoHW03"
+author: "Nicolas Gandolfo"
+date: "05/25/25"
+format: html
+---
+
+# Setup
+
+```{r}
+
+library(tidyverse)
+library(here)
+library(flextable)
+library(janitor)
+library(readxl)
+
+```
+
+
+Github Repository link: https://github.com/niicky41/ENVS-193DS_homework-03.git
+
+# Problem 1. 
+
+## a.
